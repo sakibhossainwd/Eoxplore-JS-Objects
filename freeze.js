@@ -5,6 +5,12 @@ const keys = Object.keys(botte);
 // get all properties value in array
 const values = Object.values(botte);
 // console.log(values);
-// get sigle properties and value array in array
+// get sigle properties and value array in array / two dimentional array
 const pair = Object.entries(botte);
-console.log(pair);
+// console.log(pair);
+// seal means fixt the object 
+Object.seal(botte);
+// delete properties and value by using Object.delete
+delete botte.isCleaned;
+
+console.log(botte);
