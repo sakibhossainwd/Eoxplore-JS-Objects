@@ -1,5 +1,5 @@
-const first = {a: 5};
-const second = {a: 5};
+const first = {a: 5, b:2, c:7};
+const second = {a: 5, b:2, c:7};
 const third = second;
 // if(third === second){
 //     console.log('they are same')
@@ -11,10 +11,23 @@ const third = second;
 // do not use this method to compare object or array
 const firstString = JSON.stringify(first);
 const secondString = JSON.stringify(second);
-console.log(firstString, secondString);
-if(firstString === secondString){
-    console.log('they are same')
+// console.log(firstString, secondString);
+// if(firstString === secondString){
+//     console.log('they are same')
+// }
+// else{
+//     console.log('different')
+// }
+
+function compareObject(first, second){
+    const firstKeys = Object.keys(first);
+    const secondKeys = Object.keys(second);
+    if(firstKeys.length === secondKeys.length){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
-else{
-    console.log('different')
-}
+const isSame = compareObject(first, second);
+console.log(isSame);
