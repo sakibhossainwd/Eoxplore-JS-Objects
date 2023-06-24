@@ -9,11 +9,17 @@ const student = {
     improveExam: function(subject){
         this.exam();
         return `${this.name} is takeing improvement exam on ${subject}`
+    },
+    giveTreat: function(amount, tips){
+        this.money = this.money - (amount + tips);
+        return this.money;
     }
 }
 
 const output = student.exam();
-console.log(output);
+// console.log(output);
 const reExam = student.improveExam('math')
-console.log(reExam);
+// console.log(reExam);
 // console.log(student);
+const remainin = student.giveTreat(1000, 100);
+console.log(remainin)
