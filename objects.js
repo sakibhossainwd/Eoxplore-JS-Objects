@@ -39,13 +39,13 @@ class person1{
 }
 
 const personResult = new person1(56);
-// console.log(personResult);
+console.log(personResult);
 
-// Function
-function car(model, price){
+// 5. Function
+function Car(model, price){
     this.model = model;
     this.price = price;
 }
 
-const tesla = new car('z-5', 50000);
-console.log(tesla);
+const tesla = new Car('z-5', 50000);
+// console.log(tesla);
