@@ -29,7 +29,6 @@ function compareObject(first, second){
             }
         }
         return true;
-        
     }
     else{
         return false;
