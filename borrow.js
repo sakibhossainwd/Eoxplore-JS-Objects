@@ -17,12 +17,24 @@ const student = {
 }
 
 const output = student.exam();
-console.log(output);
+// console.log(output);
 
 const student2 = {
     name: 'Rakib Hossain',
     money: 2000
 }
 
+// call
 const output2 = student.exam.call(student2);
-console.log(output2); 
+// console.log(output2); 
+const student2Money = student.giveTreat.call(student2, 500, 100);
+console.log(student2Money)
+
+// apply
+const student2Money2 = student.giveTreat.apply(student2, [1000, 100]);
+console.log(student2Money2);
+
+// bind
+const student2Treat = student.giveTreat.bind(student2);
+const remainning = student2Treat(150, 50);
+console.log(remainning);
