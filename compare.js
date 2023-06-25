@@ -23,7 +23,13 @@ function compareObject(first, second){
     const firstKeys = Object.keys(first);
     const secondKeys = Object.keys(second);
     if(firstKeys.length === secondKeys.length){
+        for(const key of firstKeys){
+            if(first[key] !== second[key]){
+                return false;
+            }
+        }
         return true;
+        
     }
     else{
         return false;
