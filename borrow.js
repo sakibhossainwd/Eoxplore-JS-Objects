@@ -18,5 +18,11 @@ const student = {
 
 const output = student.exam();
 console.log(output);
-const reExam = student.improveExam('math')
-// console.log(reExam);
+
+const student2 = {
+    name: 'Rakib Hossain',
+    money: 2000
+}
+
+const output2 = student.exam.call(student2);
+console.log(output2); 
